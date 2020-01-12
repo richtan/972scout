@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap');
+
+$footer_height: 50px;
+$section_margin: 10px;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+
+* {
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+}
+
+#container {
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: $footer_height;
+}
+
+#header {
+  margin: $section_margin;
+}
+
+#content {
+  margin: $section_margin;
+}
+
+#footer {
+  height: $footer_height;
+  position: absolute;
+  // width: calc(100% - (#{$section_margin} * 2));
+  bottom: 0;
+  margin: $section_margin;
+}
+
+#category_button {
+  background-color: #ffc0a8;
+  margin: 5px;
+}

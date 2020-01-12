@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Scout 972{% endblock %}
+
+{% block content %}
+<h1>Scout 972</h1>
+<a class="btn btn-lg" id="category_button" href="{% url 'scout:pit_data_input' %}">Pit Data Input</a>
+<a class="btn btn-lg" id="category_button" href="{% url 'scout:match_data_input' %}">Match Data Input</a>
+<a class="btn btn-lg" id="category_button" href="{% url 'scout:pit_data' %}">Pit Data</a>
+<a class="btn btn-lg" id="category_button" href="{% url 'scout:match_data' %}">Match Data</a>
+<a class="btn btn-lg" id="category_button" href="{% url 'scout:rankings' %}">Rankings</a>
+<a class="btn btn-lg" id="category_button" href="{% url 'scout:team_pages' %}">Team Pages</a>
+{% endblock %}

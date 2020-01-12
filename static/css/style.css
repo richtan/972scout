@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+
+* {
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+}
+
+#container {
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+#header {
+  margin: 10px;
+}
+
+#content {
+  margin: 10px;
+}
+
+#footer {
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+}
+
+#category_button {
+  background-color: #ffc0a8;
+  margin: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

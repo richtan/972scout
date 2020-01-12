@@ -1,0 +1,33 @@
+{% load static %}
+
+{% url 'scout:home' as scout_home %}
+{% url 'pit:home' as pit_home %}
+{% url 'publicity:home' as publicity_home %}
+
+<nav class="navbar navbar-dark navbar-expand-sm rounded" id="navbar_header"
+  style="background-color: #FF6400">
+  <a class="navbar-brand" href="{% url 'scout:home' %}">
+    <img src="{% static 'img/favicon.ico' %}" width="30px" height="30px" class="d-inline-block align-top" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbartoggle">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbartoggle">
+    <div class="navbar-nav mr-auto">
+      <div class="nav-item dropdown{% if request.resolver_match.app_name == 'scout' %} active{% endif %}"
+        href="{% url 'scout:home' %}">
+        <a data-toggle="dropdown" id="userDropdown" role="button" class="nav-link dropdown-toggle" href="{% url 'scout:home' %}">Scouting</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{% url 'scout:pit_data_input' %}">Pit Data Input</a>
+          <a class="dropdown-item" href="{% url 'scout:match_data_input' %}">Match Data Input</a>
+          <a class="dropdown-item" href="{% url 'scout:pit_data' %}">Pit Data</a>
+          <a class="dropdown-item" href="{% url 'scout:match_data' %}">Match Data</a>
+          <a class="dropdown-item" href="{% url 'scout:rankings' %}">Rankings</a>
+          <a class="dropdown-item" href="{% url 'scout:team_pages' %}">Team Pages</a>
+        </div>
+      </div>
+      <a class="nav-link{% if request.resolver_match.app_name == 'pit' %} active{% endif %}" href="{% url 'pit:home' %}">Pit Display</a>
+      <a class="nav-link{% if request.resolver_match.app_name == 'publicity' %} active{% endif %}" href="{% url 'publicity:home' %}">Publicity Board</a>
+    </div>
+  </div>
+</nav>
