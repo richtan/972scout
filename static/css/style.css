@@ -34,7 +34,7 @@ body {
   margin: 10px;
 }
 
-#category_button {
+.category_button {
   background-color: #ffc0a8;
   margin: 5px;
 }
