@@ -5,4 +5,3 @@ Installation Instructions:
 2. Install missing Python packages using pip
 
 TODO:
-- Update to 2020 game
