@@ -14,10 +14,12 @@ def pit_data_input(request):
     form = PitInputForm(request.POST or None)
     if form.is_valid():
         form.save()
+        return redirect("home")
     return render(request, "scout/pit_data_input.html", {"form": form})
 
 def match_data_input(request):
     form = MatchInputForm(request.POST or None)
     if form.is_valid():
         form.save()
+        return redirect("home")
     return render(request, "scout/match_data_input.html", {"form": form})
