@@ -1,27 +1,23 @@
-from django.shortcuts import render
-from django.views.generic.base import TemplateView
-from django.views.generic.edit import FormView
+from django.shortcuts import render, redirect
 from .forms import *
 
-class HomeView(TemplateView):
-    template_name = "scout/home.html"
+def home(request):
+    return render(request, "scout/home.html")
 
-class PitDataInputView(FormView):
-    template_name = "scout/pit_data_input.html"
-    form_class = PitInputForm
+def rankings(request):
+    return redirect("https://www.thebluealliance.com/event/2019casf#rankings", permanent=True)
 
-class MatchDataInputView(FormView):
-    template_name = "scout/match_data_input.html"
-    form_class = MatchInputForm
+def team_pages(request):
+    return render(request, "scout/team_pages.html")
 
-class PitDataView(TemplateView):
-    template_name = "scout/pit_data.html"
+def pit_data_input(request):
+    form = PitInputForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    return render(request, "scout/pit_data_input.html", {"form": form})
 
-class MatchDataView(TemplateView):
-    template_name = "scout/match_data.html"
-
-class RankingsView(TemplateView):
-    template_name = "scout/rankings.html"
-
-class TeamPagesView(TemplateView):
-    template_name = "scout/team_pages.html"
+def match_data_input(request):
+    form = MatchInputForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    return render(request, "scout/match_data_input.html", {"form": form})

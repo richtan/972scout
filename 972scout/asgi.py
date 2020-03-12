@@ -1,5 +1,5 @@
 """
-ASGI config for frcscout project.
+ASGI config for 972scout project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'scout972.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', '972scout.settings.production')
 
 application = get_asgi_application()

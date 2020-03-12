@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class PitConfig(AppConfig):
+class PublicityConfig(AppConfig):
     name = 'publicity'

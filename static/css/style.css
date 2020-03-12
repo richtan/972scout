@@ -4,38 +4,29 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  position: relative;
-}
+  position: relative; }
 
 * {
-  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
-}
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif; }
 
 #container {
   min-height: 100vh;
   overflow: hidden;
   display: block;
   position: relative;
-  padding-bottom: 50px;
-}
+  padding-bottom: 50px; }
 
 #header {
-  margin: 10px;
-}
+  margin: 10px; }
 
 #content {
-  margin: 10px;
-}
+  margin: 10px; }
 
 #footer {
   height: 50px;
   position: absolute;
   bottom: 0;
-  margin: 10px;
-}
+  margin: 0 10px; }
 
-.category-button {
-  margin: 5px;
-}
-
-/*# sourceMappingURL=style.css.map */
+.asteriskField {
+  display: none; }

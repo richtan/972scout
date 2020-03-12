@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-
-{% block title %}Input Pit Data{% endblock %}
+{% load crispy_forms_tags %}
 
 {% block content %}
-<h1>Input Pit Data</h1>
+<h1>{% block title %}Input Pit Data{% endblock %}</h1>
+<hr>
+{% crispy form %}
 {% endblock %}

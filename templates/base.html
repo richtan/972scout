@@ -4,11 +4,9 @@
 <head>
   {% load static %}
   <title>{% block title %}{% endblock %}</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}" />
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <script src="{% static 'js/scripts.js' %}"></script>
   {% include 'includes/imports.html' %}
   {% block head %}{% endblock %}
 </head>
@@ -17,7 +15,7 @@
     <div id="header">
       {% include 'includes/header.html' %}
     </div>
-    <div id="content" class="jumbotron text-center">
+    <div id="content" class="jumbotron p-5">
       {% block content %}
       {% endblock %}
     </div>
@@ -25,5 +23,6 @@
       {% include 'includes/footer.html' %}
     </div>
   </div>
+  <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>

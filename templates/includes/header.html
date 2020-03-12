@@ -1,7 +1,6 @@
 {% load static %}
 
 {% url 'scout:home' as scout_home %}
-{% url 'pit:home' as pit_home %}
 {% url 'publicity:home' as publicity_home %}
 
 <nav class="navbar navbar-dark navbar-expand-sm rounded" id="navbar_header"
@@ -20,13 +19,10 @@
         <div class="dropdown-menu">
           <a class="dropdown-item" href="{% url 'scout:pit_data_input' %}">Pit Data Input</a>
           <a class="dropdown-item" href="{% url 'scout:match_data_input' %}">Match Data Input</a>
-          <a class="dropdown-item" href="{% url 'scout:pit_data' %}">Pit Data</a>
-          <a class="dropdown-item" href="{% url 'scout:match_data' %}">Match Data</a>
           <a class="dropdown-item" href="{% url 'scout:rankings' %}">Rankings</a>
           <a class="dropdown-item" href="{% url 'scout:team_pages' %}">Team Pages</a>
         </div>
       </div>
-      <a class="nav-link{% if request.resolver_match.app_name == 'pit' %} active{% endif %}" href="{% url 'pit:home' %}">Pit Display</a>
       <a class="nav-link{% if request.resolver_match.app_name == 'publicity' %} active{% endif %}" href="{% url 'publicity:home' %}">Publicity Board</a>
     </div>
   </div>

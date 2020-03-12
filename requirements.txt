@@ -1,2 +1,5 @@
 Django==3.0.2
-django-sass==0.2.0
+django-compressor==2.4
+django-crispy-forms==1.8.1
+django-sass-processor==0.8
+libsass==0.19.4

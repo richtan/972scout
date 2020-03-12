@@ -36,9 +36,9 @@ body {
   position: absolute;
   // width: calc(100% - (#{$section_margin} * 2));
   bottom: 0;
-  margin: $section_margin;
+  margin: 0 $section_margin;
 }
 
-.category-button {
-  margin: 5px;
+.asteriskField {
+  display: none;
 }
