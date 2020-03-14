@@ -1,0 +1,5 @@
+-r base.txt
+
+django-compressor==2.4
+django-sass-processor==0.8
+libsass==0.19.4
